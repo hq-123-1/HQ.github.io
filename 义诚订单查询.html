@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>订单查询系统</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: '微软雅黑', sans-serif;
+            background: #f0f2f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .module {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: #34495e;
+        }
+
+        .module:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .module h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #3498db;
+        }
+
+        .module p {
+            color: #7f8c8d;
+            font-size: 1.1em;
+        }
+
+        /* 不同模块颜色区分 */
+        .module:nth-child(1) { border: 2px solid #3498db; }
+        .module:nth-child(2) { border: 2px solid #e74c3c; }
+        .module:nth-child(3) { border: 2px solid #2ecc71; }
+
+        /* 手机端适配 */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .module {
+                padding: 20px;
+            }
+            
+            .module h2 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>订单管理系统</h1>
+        
+        <div class="module-grid">
+            <a href="https://f.wps.cn/etapps/query/q/7RJp4ieR" class="module">
+                <h2>客户订单查询</h2>
+                <p>点击查询客户订单详细信息</p>
+            </a>
+            
+            <a href="https://f.wps.cn/etapps/query/q/z70mqnvB" class="module">
+                <h2>待出库查询</h2>
+                <p>查看待出库商品清单</p>
+            </a>
+            
+            <a href="https://f.wps.cn/etapps/query/q/dCS0oKcv" class="module">
+                <h2>流程卡状态查询</h2>
+                <p>跟踪流程卡当前状态</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
